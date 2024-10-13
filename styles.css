@@ -1,0 +1,55 @@
+/* Full-screen background and game container setup */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-image: url('images/jungle-background.png'); /* Jungle-themed background */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.game-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Jungle explorer styling for fun */
+#gameTitle {
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+#progress {
+    font-size: 1.2em;
+    color: #16a085;
+}
+
+#questionContainer {
+    margin-top: 20px;
+}
+
+#nextBtn {
+    padding: 10px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#nextBtn:hover {
+    background-color: #2ecc71;
+}
+
+.feedback {
+    font-size: 1.1em;
+    color: #2980b9;
+    margin-top: 15px;
+}
