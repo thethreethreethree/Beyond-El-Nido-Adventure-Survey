@@ -1,8 +1,14 @@
 const questions = [
-    { question: "Why don't you want to join the jungle adventure?", options: ["Too far", "Too expensive", "Not adventurous enough", "Other"], feedback: "Exploring faraway lands isn't for everyone!" },
-    { question: "What concerns you most about jungle adventures?", options: ["Insects", "Getting lost", "Weather", "Other"], feedback: "Fear not! The jungle has guides!" },
-    { question: "How do you feel about roughing it?", options: ["Love it!", "Not for me", "Maybe", "Other"], feedback: "The jungle awaits the brave!" },
-    // More fun questions...
+    { question: "What is your biggest concern about joining a jungle adventure?", options: ["Too remote", "Not enough comfort", "Scared of insects/animals", "Other"], feedback: "Exploring faraway lands isn't for everyone!" },
+    { question: "How do you feel about spending a day in the wilderness?", options: ["Excited! Can't wait", "A little nervous", "Not my thing", "Other"], feedback: "The jungle awaits!" },
+    { question: "What activities would make the jungle adventure more interesting for you?", options: ["Hiking and exploring", "Wildlife watching", "Local cultural experiences", "Other"], feedback: "Great choice for an adventure!" },
+    { question: "What would make you reconsider joining the jungle adventure?", options: ["Lower price", "More luxury amenities", "Shorter trip duration", "Other"], feedback: "Customization is key!" },
+    { question: "What type of group do you prefer for such adventures?", options: ["Small groups (4-6 people)", "Large groups (10+ people)", "Solo or with just a friend", "Other"], feedback: "Your preferences matter!" },
+    { question: "How do you feel about camping during a jungle adventure?", options: ["Love it! It’s part of the fun", "I'd prefer a lodge or hotel", "Not a fan of camping", "Other"], feedback: "The jungle offers diverse experiences!" },
+    { question: "Which part of a jungle adventure do you find least appealing?", options: ["Physical exertion (hiking, climbing)", "Lack of modern comforts", "Unpredictable weather", "Other"], feedback: "We'll find a balance!" },
+    { question: "What do you think about the duration of the jungle adventure?", options: ["Perfect, one day is ideal", "Too short, I'd want more time", "Too long, I prefer a quick visit", "Other"], feedback: "Duration is flexible!" },
+    { question: "What type of food would you prefer during a jungle adventure?", options: ["Local delicacies", "Comfort food I know", "Snacks and light meals", "Other"], feedback: "Great food choices!" },
+    { question: "What would be the deciding factor in your choice to join or not join the adventure?", options: ["Cost of the trip", "Time commitment", "Level of adventure", "Other"], feedback: "It's important to know your priorities!" }
 ];
 
 let currentQuestionIndex = 0;
@@ -28,18 +34,17 @@ function showQuestion(index) {
 function submitAnswer() {
     const selectedOption = document.querySelector('input[name="answer"]:checked');
     if (selectedOption) {
-        score += 10; // Add points for each answered question
-        document.getElementById('score').innerText = score; // Update score display
+        score += 10;
+        document.getElementById('score').innerText = score;
 
-        // Show feedback after answering
         document.getElementById('feedback').innerText = questions[currentQuestionIndex].feedback;
 
         currentQuestionIndex++;
         if (currentQuestionIndex < questions.length) {
             setTimeout(() => {
-                document.getElementById('feedback').innerText = ''; // Clear feedback
-                showQuestion(currentQuestionIndex); // Show next question
-            }, 1000); // Delay to give time for feedback
+                document.getElementById('feedback').innerText = '';
+                showQuestion(currentQuestionIndex);
+            }, 1000);
         } else {
             endGame();
         }
@@ -50,9 +55,9 @@ function submitAnswer() {
 
 function endGame() {
     document.getElementById('questionContainer').innerHTML = `<h2>Congrats, Explorer! You've completed the journey!</h2>`;
-    document.getElementById('nextBtn').style.display = 'none'; // Hide the Next button
+    document.getElementById('nextBtn').style.display = 'none';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    showQuestion(currentQuestionIndex); // Start game
+    showQuestion(currentQuestionIndex);
 });
