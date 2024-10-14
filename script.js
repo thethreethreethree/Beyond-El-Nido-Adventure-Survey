@@ -1,14 +1,14 @@
 const questions = [
-    { question: "What is your biggest concern about joining a jungle adventure?", options: ["Too remote", "Not enough comfort", "Scared of insects/animals", "Other"], feedback: "Exploring faraway lands isn't for everyone!" },
-    { question: "How do you feel about spending a day in the wilderness?", options: ["Excited! Can't wait", "A little nervous", "Not my thing", "Other"], feedback: "The jungle awaits!" },
-    { question: "What activities would make the jungle adventure more interesting for you?", options: ["Hiking and exploring", "Wildlife watching", "Local cultural experiences", "Other"], feedback: "Great choice for an adventure!" },
-    { question: "What would make you reconsider joining the jungle adventure?", options: ["Lower price", "More luxury amenities", "Shorter trip duration", "Other"], feedback: "Customization is key!" },
-    { question: "What type of group do you prefer for such adventures?", options: ["Small groups (4-6 people)", "Large groups (10+ people)", "Solo or with just a friend", "Other"], feedback: "Your preferences matter!" },
-    { question: "How do you feel about camping during a jungle adventure?", options: ["Love it! It’s part of the fun", "I'd prefer a lodge or hotel", "Not a fan of camping", "Other"], feedback: "The jungle offers diverse experiences!" },
-    { question: "Which part of a jungle adventure do you find least appealing?", options: ["Physical exertion (hiking, climbing)", "Lack of modern comforts", "Unpredictable weather", "Other"], feedback: "We'll find a balance!" },
-    { question: "What do you think about the duration of the jungle adventure?", options: ["Perfect, one day is ideal", "Too short, I'd want more time", "Too long, I prefer a quick visit", "Other"], feedback: "Duration is flexible!" },
-    { question: "What type of food would you prefer during a jungle adventure?", options: ["Local delicacies", "Comfort food I know", "Snacks and light meals", "Other"], feedback: "Great food choices!" },
-    { question: "What would be the deciding factor in your choice to join or not join the adventure?", options: ["Cost of the trip", "Time commitment", "Level of adventure", "Other"], feedback: "It's important to know your priorities!" }
+    { question: "How interested are you in visiting Lio Beach to relax and enjoy refreshments?", options: ["Very interested", "Somewhat interested", "Not interested", "Other"], feedback: "Lio Beach has a serene vibe!" },
+    { question: "What do you think about participating in a boodle fight lunch at Lamuro Farm?", options: ["Sounds like fun!", "I prefer a more formal meal", "Not interested", "Other"], feedback: "Boodle fights are a unique experience!" },
+    { question: "Would you be interested in learning more about farm life while at Lamuro Farm?", options: ["Yes, I love learning about farms", "Maybe, depending on the activities", "Not really interested", "Other"], feedback: "Farm life has its own charm!" },
+    { question: "How do you feel about a 30-minute hike to the Bulalacao Waterfalls?", options: ["Excited, sounds like a great adventure", "Fine, but I prefer a shorter hike", "Not interested in hiking", "Other"], feedback: "The waterfalls are worth the hike!" },
+    { question: "Would you consider renting aqua shoes for the hike if needed?", options: ["Yes, I would rent them", "No, I’ll bring my own", "I don’t want to hike", "Other"], feedback: "Aqua shoes will keep your feet comfy!" },
+    { question: "How do you feel about spending the afternoon at Nacpan Beach with a welcome drink at the Twin Beach Club?", options: ["It sounds relaxing and fun!", "I’d prefer more activities on the beach", "Not interested in the beach", "Other"], feedback: "Nacpan Beach is a tropical paradise!" },
+    { question: "Would a welcome drink at the Twin Beach Club enhance your experience at Nacpan Beach?", options: ["Yes, it’s a great addition", "It’s okay, but not essential", "I don’t drink", "Other"], feedback: "Cheers to a great time at the beach!" },
+    { question: "How do you feel about joining a karaoke session on the way back to town?", options: ["Sounds like a lot of fun!", "I’d prefer something quieter", "Not interested in karaoke", "Other"], feedback: "Sing your heart out!" },
+    { question: "What would make this inland tour more enjoyable for you?", options: ["More activities", "Shorter stops", "Different types of food", "Other"], feedback: "Customization can make any trip perfect!" },
+    { question: "What might prevent you from joining this inland tour?", options: ["Cost", "Duration", "Type of activities", "Other"], feedback: "Let us know how we can make it better!" }
 ];
 
 let currentQuestionIndex = 0;
@@ -54,7 +54,7 @@ function submitAnswer() {
 }
 
 function endGame() {
-    document.getElementById('questionContainer').innerHTML = `<h2>Congrats, Explorer! You've completed the journey!</h2>`;
+    document.getElementById('questionContainer').innerHTML = `<h2>Congrats! You've completed the tour survey!</h2>`;
     document.getElementById('nextBtn').style.display = 'none';
 }
 
