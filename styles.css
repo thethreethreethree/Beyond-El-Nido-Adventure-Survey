@@ -1,7 +1,6 @@
-/* Full-screen background and game container setup */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-image: url('images/jungle-background.png'); /* Jungle-themed background */
+    background-image: url('images/jungle-background.png'); 
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -20,7 +19,6 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Jungle explorer styling for fun */
 #gameTitle {
     font-size: 2em;
     color: #2c3e50;
